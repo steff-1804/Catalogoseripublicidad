@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071b49">
+  <meta name="description" content="Catálogo digital de SeriPublicidad. Artículos promocionales, textiles y publicidad corporativa.">
+  <title>SeriPublicidad | Catálogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <a href="#inicio" class="brand">
+    <img src="assets/logo.png" alt="SeriPublicidad">
+  </a>
+
+  <nav id="nav">
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="quote-counter" id="openQuote">
+      Cotización <span id="quoteCount">0</span>
+    </button>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-text">
+      <span class="kicker">SERIPUBLICIDAD</span>
+      <h1>Tu idea, <span>la plasmamos</span> en cualquier artículo.</h1>
+      <p>Publicidad corporativa, promocionales y prendas personalizadas con opciones para distintos volúmenes de compra.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#catalogo">Ver catálogo</a>
+        <a class="btn btn-outline" href="https://wa.me/593981412468" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div class="business-info">
+        <div><strong>WhatsApp</strong><span>098 141 2468</span></div>
+        <div><strong>Teléfono</strong><span>2694150</span></div>
+        <div><strong>Instagram</strong><span>@seripublicidad_</span></div>
+      </div>
+    </div>
+
+    <div class="hero-showcase">
+      <div class="rainbow"></div>
+      <img src="assets/logo.png" alt="Logo SeriPublicidad" class="hero-logo">
+      <div class="floating-card c1">Textiles</div>
+      <div class="floating-card c2">Promocionales</div>
+      <div class="floating-card c3">Personalización</div>
+    </div>
+  </section>
+
+  <section class="section category-strip">
+    <button class="category-pill active" data-filter="todos">Todos</button>
+    <button class="category-pill" data-filter="tazas-bolsos">Tazas y bolsos</button>
+    <button class="category-pill" data-filter="promocionales">Promocionales</button>
+    <button class="category-pill" data-filter="gorras">Gorras</button>
+    <button class="category-pill" data-filter="textiles">Textiles</button>
+  </section>
+
+  <section class="section catalog" id="catalogo">
+    <div class="section-heading">
+      <div>
+        <span class="kicker">CATÁLOGO DIGITAL</span>
+        <h2>Productos y precios</h2>
+        <p>Selecciona productos para preparar una cotización por WhatsApp.</p>
+      </div>
+      <label class="search">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Buscar producto...">
+      </label>
+    </div>
+
+    <div id="productGrid" class="product-grid"></div>
+    <div id="emptyState" class="empty-state">No encontramos productos con ese criterio.</div>
+  </section>
+
+  <section class="section original-catalog">
+    <div class="section-heading simple">
+      <div>
+        <span class="kicker">REFERENCIA ORIGINAL</span>
+        <h2>Catálogo suministrado</h2>
+        <p>También puedes revisar las láminas originales proporcionadas.</p>
+      </div>
+    </div>
+    <div class="sheet-grid">
+      <a href="assets/catalogo_tazas_bolsos.png" target="_blank"><img src="assets/catalogo_tazas_bolsos.png" alt="Tazas y bolsos"></a>
+      <a href="assets/catalogo_promocionales.png" target="_blank"><img src="assets/catalogo_promocionales.png" alt="Promocionales"></a>
+      <a href="assets/catalogo_gorras.png" target="_blank"><img src="assets/catalogo_gorras.png" alt="Gorras"></a>
+      <a href="assets/catalogo_polos.png" target="_blank"><img src="assets/catalogo_polos.png" alt="Polos"></a>
+      <a href="assets/catalogo_camisetas.png" target="_blank"><img src="assets/catalogo_camisetas.png" alt="Camisetas"></a>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div>
+      <span class="kicker light">CONTACTO</span>
+      <h2>¿Necesitas una cotización especial?</h2>
+      <p>Envíanos cantidades, artículo y personalización requerida.</p>
+    </div>
+    <div class="contact-list">
+      <a href="https://wa.me/593981412468" target="_blank" rel="noopener">WhatsApp: 098 141 2468</a>
+      <span>Teléfono: 2694150</span>
+      <span>E2A y General Julio Andrade · Sector El Beaterio</span>
+      <span>Instagram: @seripublicidad_</span>
+      <span>Facebook: Seri Publi</span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="assets/logo.png" alt="SeriPublicidad">
+  <p>© <span id="year"></span> SeriPublicidad · Catálogo digital</p>
+</footer>
+
+<!-- Drawer cotización -->
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside class="drawer" id="quoteDrawer">
+  <div class="drawer-head">
+    <div>
+      <span class="kicker">TU SOLICITUD</span>
+      <h3>Cotización</h3>
+    </div>
+    <button id="closeQuote" class="close-btn">×</button>
+  </div>
+  <div id="quoteItems" class="quote-items"></div>
+  <div class="quote-form">
+    <input id="clientName" placeholder="Tu nombre">
+    <input id="clientCompany" placeholder="Empresa (opcional)">
+    <textarea id="clientNotes" rows="3" placeholder="Detalles adicionales"></textarea>
+    <button id="sendQuote" class="btn btn-primary full">Enviar por WhatsApp</button>
+  </div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
